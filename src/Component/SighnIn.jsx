@@ -10,7 +10,6 @@ const SignIn = () => {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [data, setData] = useState(null); // Add this line to store response data if needed
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -21,21 +20,17 @@ const SignIn = () => {
     });
   };
 
-  const config = {
-    headers: {
-      'Content-Type': 'application/json',
-      'Host': 'localhost:9001'
-    }
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
     setLoading(true); // Set loading state to true
 
     // Make the Axios request
-    axios.post(`${process.env.MOVE_CLOUD_LOCAL_HOST_BACK_END}/signin`, formData)
+    axios.post(`${process.env.MOVE_CLOUD_LOCAL_HOST_BACK_END}/signin`, formData, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
       .then(response => { 
-        setData(response.data);
         setLoading(false);
         // Redirect to the different application
         window.location.href = 'http://localhost:9000/';
@@ -53,7 +48,7 @@ const SignIn = () => {
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2" htmlFor="username">
-            username
+              Username
             </label>
             <input
               type="text"

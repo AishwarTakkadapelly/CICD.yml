@@ -1,11 +1,9 @@
-import Body  from "./Component/Body";
-import ReactDOM from 'react-dom';
 import React from 'react';
+import Body from "./Component/Body";
 
 function App() {
   return (
-
-      <Body />
+    <Body />
   );
 }
 

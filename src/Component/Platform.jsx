@@ -59,14 +59,14 @@ const Platform = () => {
               <p className="text-gray-700">
                 Put applications and workloads close to your end users, no matter where they are in the world, with the world’s most distributed cloud platform.
               </p>
-              <a href="#" className="text-blue-500 hover:underline">Learn more</a>
+              <a href="https://www.akamai.com/solutions/cloud-computing" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Learn more</a>
             </div>
             <div className="mb-4">
               <h4 className="text-xl font-semibold text-gray-800">Cloud Computing at the Edge</h4>
               <p className="text-gray-700">
                 Deliver faster and more reliable applications with edge computing solutions that bring computation and data storage closer to your users.
               </p>
-              <a href="#" className="text-blue-500 hover:underline">Learn more</a>
+              <a href="https://www.akamai.com/solutions/edge-computing" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Learn more</a>
             </div>
           </div>
         </div>
